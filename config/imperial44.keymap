@@ -6,30 +6,17 @@
 
 / {
     macros {
-        to_ru: to_ru {
+        to_ru: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHIFT &kp N2>,
-                <&macro_release>,
-                <&macro_wait_time 75>,
-                <&to 4>;
-
-            label = "TO_RU";
-            wait-ms = <50>;
+            bindings = <&kp LC(LS(N1)) &to 4>;
+            label = "TO_EN";
         };
 
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp LSHIFT &kp N1>,
-                <&macro_release>,
-                <&macro_wait_time 75>,
-                <&to 0>;
-
+            bindings = <&kp LC(LS(N1)) &to 0>;
             label = "TO_EN";
         };
     };
@@ -88,7 +75,7 @@
             bindings = <
 &kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA    &kp RU_CYRILLIC_IE                                                  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_ZE   &kp RU_CYRILLIC_IO
 &kp GRAVE  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A     &kp RU_CYRILLIC_PE                                                  &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &kp RU_CYRILLIC_HA
-&to_en     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM    &kp RU_CYRILLIC_I   &kp LEFT_BRACKET      &kp RIGHT_BRACKET         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_E    &kp RU_CYRILLIC_HARD_SIGN
+&to_ru     &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM    &kp RU_CYRILLIC_I   &kp LEFT_BRACKET      &kp RIGHT_BRACKET         &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_E    &kp RU_CYRILLIC_HARD_SIGN
                                                                               &mt LEFT_CONTROL TAB  &lt 1 SPACE         &mt LGUI BACKSPACE    &mt LEFT_SHIFT BACKSPACE  &lt 2 ENTER         &mt LEFT_ALT FSLH
             >;
 
